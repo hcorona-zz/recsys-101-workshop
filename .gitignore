@@ -1,4 +1,6 @@
 #personal preferences
+data/*
+data/*.*
 *.csv
 *.zip
 *.txt
