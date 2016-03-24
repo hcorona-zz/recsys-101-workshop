@@ -1,6 +1,4 @@
-## WWC-recsys:
-## women who code - Recommender Systems (RS) interactive session
-## 21st April 2016
+## WWC-recsys:  women who code - Recommender Systems (RS) interactive session
 
 ### Resources
 * book: Programming Collective Intelligence book:
@@ -9,7 +7,7 @@
 ### Presentation:
 * The presentation is an introduction to RS from Humberto's talk at #unit conference: (add link)
 
-## How to set up the code
+### How to set up the code
 * You need python 3.5 installed
 * If you run `python python/setup.py requirements` it will install all the required packages
 * For examples go to python/examples.py
