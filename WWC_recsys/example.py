@@ -2,6 +2,7 @@ import os
 import pandas as pd
 import WWC_recsys.utils as utils
 import WWC_recsys.uknn as uknn
+import WWC_recsys.modone as modone
 import logging
 # @todo add license
 
