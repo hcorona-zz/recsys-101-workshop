@@ -2,7 +2,6 @@ import os
 import pandas as pd
 import WWC_recsys.utils as utils
 import WWC_recsys.uknn as uknn
-import WWC_recsys.modone as modone
 import logging
 # @todo add license
 
@@ -48,14 +47,14 @@ print(ratings.ix[ratings.userId == username])
 
 # get recommendations for a single user using UKNN method
 # @todo make recommendations of length N (we don't want all recommendations)
-#recommendations = uknn.recommend(username=username, ratings=ratings, K=40, N=10, similarity_metric='intersection')
-#print(recommendations[:10])
+recommendations = uknn.recommend(username=username, ratings=ratings, K=40, N=10, similarity_metric='intersection')
+print(recommendations[:10])
 
 recommendations_pearson = uknn.recommend(username=username, ratings=ratings, K=40, N=10, similarity_metric='pearson')
-#print(recommendations_pearson[:10])
+print(recommendations_pearson[:10])
 
 # @todo run recommendations on all users and evaluate based on PRC-N
 
 # @todo run spark ALS on the same data and get recommendations
 # @todo add ALS model
-#recommendations_als = matrix_factorization.recommend
+# recommendations_als = matrix_factorization.recommend

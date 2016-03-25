@@ -67,7 +67,6 @@ def recommend(username, ratings, K, N, similarity_metric):
     :return: a dataframe with a list of recommendations and the predicted rating
     : adding this to see if it's updated
     """
-    print('hello im in')
     # create the rating matrix: for small datasets should fit in memory
     ratings_p = ratings.pivot_table(index='userId', columns='title', values='rating', fill_value=0)
 
@@ -100,8 +99,8 @@ def recommend(username, ratings, K, N, similarity_metric):
             # if this movie has been recommended  by other neighbours
             else: recommendations[movie] = recommendations[movie] + prediction.values[0]
     # now make list from dictionary
+    recommendations = list(recommendations.items())
     recommendations = pd.DataFrame(recommendations, columns=['title', 'rating']).sort_values(by='rating', ascending=False)
-    print(' ------ ')
-    print(recommendations)
-    # only return the top N recommendations
+
+    # @todo only return the top N recommendations
     return recommendations
