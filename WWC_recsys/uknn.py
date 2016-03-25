@@ -1,6 +1,6 @@
-from math import sqrt
 import pandas as pd
 import logging
+import numpy
 
 
 def common_sim(rating1, rating2):
@@ -10,18 +10,20 @@ def common_sim(rating1, rating2):
     :return: number of common items
     """
     rating1 = rating1[rating1 != 0]
-    rating2 = rating1[rating2 != 0]
+    rating2 = rating2[rating2 != 0]
     return len(rating1.index.intersection(rating2.index))
 
-#@todo implement pearson similarity
+# @todo implement pearson similarity
 def pearson_sim(rating1, rating2):
-    return 0
+    return numpy.corrcoef(list(rating1), list(rating2))[0, 1]
 
-#@todo implement jaccard similarity
+
+# @todo implement jaccard similarity
 def jaccard_sim(rating1, rating2):
     return 0
 
-#@todo implement most popular similarity
+
+# @todo implement most popular similarity
 def most_popular(rating1, rating2):
     return 0
 
@@ -33,8 +35,8 @@ def calculate_distance(rating1, rating2, distance_metric):
     :param distance_metric:
     :return:
     """
-    if distance_metric == 'intersection':
-        return common_sim(rating1, rating2)
+    if distance_metric == 'intersection': return common_sim(rating1, rating2)
+    if distance_metric == 'pearson': return pearson_sim(rating1, rating2)
 
 
 def compute_nearest_neighbours(username, ratings_matrix, distance_metric):
@@ -49,7 +51,7 @@ def compute_nearest_neighbours(username, ratings_matrix, distance_metric):
     rating1 = ratings_matrix.ix[username]
     for user in ratings_matrix.index:
         distance = calculate_distance(rating1, ratings_matrix.ix[user], distance_metric)
-        distances.append((distance, user))
+        distances.append((user, distance))
     distances = pd.DataFrame(distances, columns=['userId', 'similarity']).sort_values(by='similarity', ascending=False)
     return distances
 
@@ -63,14 +65,16 @@ def recommend(username, ratings, K, N, similarity_metric):
     :param N: how many recommendations to output in top-N recommendations
     :param similarity: which similarity metric to use
     :return: a dataframe with a list of recommendations and the predicted rating
+    : adding this to see if it's updated
     """
-
+    print('hello im in')
     # create the rating matrix: for small datasets should fit in memory
     ratings_p = ratings.pivot_table(index='userId', columns='title', values='rating', fill_value=0)
 
     # get the nearest neighbours and compute the total distance
-    # normalize scores to add to 1
-    nearest = compute_nearest_neighbours(username, ratings_p, similarity_metric)[0:K]
+    # normalize scorses to add to 1
+    # [1:K] to avoid self correlation
+    nearest = compute_nearest_neighbours(username, ratings_p, similarity_metric)[1:K+1]
     nearest['similarity'] = nearest.similarity / nearest.similarity.sum()
     logging.info('computed nearest neighgours using %s',similarity_metric)
 
@@ -85,20 +89,19 @@ def recommend(username, ratings, K, N, similarity_metric):
         # distance and name between two users
         weight = nearest.iloc[k].similarity
         name = nearest.iloc[k].userId
-        # get the ratings for this person
+        # get the ratings for this neigbhour
         neighborRatings = ratings.ix[ratings.userId == name]
 
-    # calculate the predicted rating for each recommendations
-    for movie in neighborRatings.title.unique():
-        # if it's the first neighbours who is recommending this movie
-        if movie not in recommendations:
+        # calculate the predicted rating for each recommendations
+        for movie in neighborRatings.title.unique():
             prediction = neighborRatings.rating[neighborRatings.title == movie]*weight
-            recommendations[movie] = prediction.values[0]
-        # if this movie has been recommended  by other neighbours
-        else: recommendations[movie] = (recommendations[movie] + prediction)
+            # if it's the first neighbours who is recommending this movie
+            if movie not in recommendations: recommendations[movie] = prediction.values[0]
+            # if this movie has been recommended  by other neighbours
+            else: recommendations[movie] = recommendations[movie] + prediction.values[0]
     # now make list from dictionary
-    recommendations = list(recommendations.items())
     recommendations = pd.DataFrame(recommendations, columns=['title', 'rating']).sort_values(by='rating', ascending=False)
-
+    print(' ------ ')
+    print(recommendations)
     # only return the top N recommendations
     return recommendations
