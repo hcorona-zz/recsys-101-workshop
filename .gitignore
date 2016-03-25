@@ -1,10 +1,9 @@
 #personal preferences
 *idea
-data/*
-data/*.*
+*.zip
+data/*.csv
 *.csv
 *.zip
-*.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
