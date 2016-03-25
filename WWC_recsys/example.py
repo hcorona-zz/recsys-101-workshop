@@ -34,7 +34,7 @@ ratings.head()
 
 # append my ratings to ratings dataframe
 username = ratings.userId.max() + 1
-my_ratings = utils.load_personal_ratings(datasets_folder, 'ratings_humberto.txt', username=username)
+my_ratings = utils.load_personal_ratings(datasets_folder, 'ratings_humberto.csv', username=username)
 ratings = ratings.append(my_ratings)
 
 # load movie metadata
