@@ -15,7 +15,7 @@ def sort_recommendations(recommendations, N):
     return pd.DataFrame(recommendations, columns=['rating', 'movie'])
 
 
-def recommend_iknn(target_customer, ratings, K, N, similarity_metric):
+def recommend_iknn(ratings, target_customer , K= 10, N= 10, similarity_metric='pearson'):
     """
     Give list of recommendations to a particular user
     :param target_customer: user for which we want to compute recommendations
@@ -58,7 +58,7 @@ def recommend_iknn(target_customer, ratings, K, N, similarity_metric):
     return sort_recommendations(recs_normalized, N)
 
 
-def recommend_uknn(target_customer, ratings, K, N, similarity_metric):
+def recommend_uknn(ratings, target_customer , K=10, N=10, similarity_metric='pearson'):
     """
     Give list of recommendations to a particular user
     :param target_customer: user for which we want to compute recommendations

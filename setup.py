@@ -29,5 +29,5 @@ setup(
     include_package_data=True,
     setup_requires=setup_requires,
     test_suite='tests',
-    authors = 'Humberto Corona, ',
+    authors ='Humberto Corona, ',
 )

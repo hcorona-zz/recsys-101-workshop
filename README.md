@@ -20,6 +20,7 @@ by generating recommendations for you and other atendees.
 * You need minimal previous knowledge with git and github. Check [this guide](https://guides.github.com/activities/hello-world/)
 * Access to the internet will be provided (we need this to download the datasets)
 * Read the presentation slides and the Collaborative filtering entry on wikipedia (on resources)
+* Make sure you have ipython or jupyter notebooks installed [jupyter notebooks install guide](http://jupyter.readthedocs.org/en/latest/install.html)
 
 * Find at least 10 movies you know and provide [1-5 ****] ratings for them. Write them down. 
 Ideally rate 20 movies, some you like, some you don't like (it is important to also rate movies you don't like, so the recommender can learn about your taste better)
@@ -29,12 +30,12 @@ Ideally rate 20 movies, some you like, some you don't like (it is important to a
 * Clone the repository 
 * Install the required packages if you don't have them 
 * Select and import the code into your favourite IDE (PyCharm is mine)
-* run the test example. If it works you are ready to go! 
+* run the test example (using ipython or jupyter notebooks). If it works you are ready to go! 
 
 ```
 > git clone https://github.com/hcorona/WWC-recsys
 > python python/setup.py requirements
-> python WWC/example.py
+> jupyter notebook WWC_recsys/example.ipynb 
 ```
 
 ### During the session: (tentative plan)
