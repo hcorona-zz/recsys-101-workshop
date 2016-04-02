@@ -1,27 +1,53 @@
-## WWC-recsys:  women who code - Recommender Systems (RS) interactive session
+This is the repo I prepared for the WWC recommender systems interactive session / hacknight.
+Here you will find all the relevant resources, as well as the code that will be used.
+The goal of the hacknight is to introduce people to recommender sytems, build your own recommender system an evaluate it
+by generating recommendations for you and other atendees. 
 
 ### Resources
-* book: Programming Collective Intelligence book:
-* code: Programming Collective Intelligence code: https://github.com/cataska/programming-collective-intelligence-code
+* Collective Intelligence book : [Programming Collective Intelligence book] (http://www.amazon.com/gp/product/0596529325/ref=as_li_qf_sp_asin_il?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596529325&linkCode=as2&tag=tasktoy-20) 
+* Collective Intelligence (book code): [Programming Collective Intelligence code](https://github.com/cataska/programming-collective-intelligence-code)
+* [Collaborative Filtering on wikipedia](https://en.wikipedia.org/wiki/Collaborative_filtering)
+* Presentation slides: an introduction to RS from Humberto's talk at #unit conference: [link](http://github.com/hcorona/WWC-recsys/resources/slides.pdf)
 
-### Presentation:
-* The presentation is an introduction to RS from Humberto's talk at #unit conference: (add link)
+### Aditional resoures 
+* [Recommendations with Apache Spark](https://www.codementor.io/spark/tutorial/building-a-recommender-with-apache-spark-python-example-app-part1)
+* [The Movielens dataset website](http://grouplens.org/datasets/movielens/)
+* [ACM Recommender Systems Wiki](http://www.recsyswiki.com/wiki/)
 
-### How to set up the code
-* You need python 3.5 installed
+
+### Before the session: 
+* You need python 3.5 installed in your laptop. Click on the [Python website](https://www.python.org/downloads/) for more info
+* You need minimal previous knowledge with git and github. Check [this guide](https://guides.github.com/activities/hello-world/)
+* Access to the internet will be provided (we need this to download the datasets)
+* Read the presentation slides and the Collaborative filtering entry on wikipedia (on resources)
+
+* Find at least 10 movies you know and provide [1-5 ****] ratings for them. Write them down. 
+Ideally rate 20 movies, some you like, some you don't like (it is important to also rate movies you don't like, so the recommender can learn about your taste better)
+
+
+### Getting ready to code: 
+* Clone the repository 
+* Install the required packages if you don't have them 
+* Select and import the code into your favourite IDE (PyCharm is mine)
+* run the test example. If it works you are ready to go! 
+
+```
+> git clone https://github.com/hcorona/WWC-recsys
+> python python/setup.py requirements
+> python WWC/example.py
+```
+
 * If you run `python python/setup.py requirements` it will install all the required packages
 * For examples go to python/examples.py
 
-### Prepare for the session:
-* Take a look at the presentation
-* Take a look at the video presentation
-* Take a look at python/examples.py
-* Find at least 10 movies you know and provide [1-5 ****] ratings for them. Ideally rate 20 movies, some you like, some you don't like (it is important to also rate movies you don't like, so the recommender can learn about your taste better)
 
-# During the session: (tentative plan)
+### During the session: (tentative plan)
 1. 20 minutes introduction talk
 2. 15 mins break , food
-3. 90 mins interactive session - you can work in pairs if you like -
+3. 90 mins interactive session. This will be a relaxed and interactive environments, with people helping you to go through the examples.
+If you want, you can join a friend and code together.
 
-
-
+### Examples of things you can do
+* See who are your neighbours, see what they have rated. This is a non-automated way to discover movies
+* Take a look at the @todo and try to solve some of the suggested exercises
+* Are the recommendations good? Which algorithm makes better recommendations?
