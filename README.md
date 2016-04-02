@@ -37,10 +37,6 @@ Ideally rate 20 movies, some you like, some you don't like (it is important to a
 > python WWC/example.py
 ```
 
-* If you run `python python/setup.py requirements` it will install all the required packages
-* For examples go to python/examples.py
-
-
 ### During the session: (tentative plan)
 1. 20 minutes introduction talk
 2. 15 mins break , food
