@@ -3,6 +3,9 @@ Here you will find all the relevant resources, as well as the code that will be 
 The goal of the hacknight is to introduce people to recommender sytems, build your own recommender system an evaluate it
 by generating recommendations for you and other atendees. 
 
+This will be a relaxed and interactive environments, with people helping you to go through the examples. If you want, you can join a friend and code together.
+
+
 ### Resources
 * Collective Intelligence book : [Programming Collective Intelligence book] (http://www.amazon.com/gp/product/0596529325/ref=as_li_qf_sp_asin_il?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596529325&linkCode=as2&tag=tasktoy-20) 
 * Collective Intelligence (book code): [Programming Collective Intelligence code](https://github.com/cataska/programming-collective-intelligence-code)
@@ -38,11 +41,11 @@ Ideally rate 20 movies, some you like, some you don't like (it is important to a
 > jupyter notebook WWC_recsys/example.ipynb 
 ```
 
-### During the session: (tentative plan)
-1. 20 minutes introduction talk
-2. 15 mins break , food
-3. 90 mins interactive session. This will be a relaxed and interactive environments, with people helping you to go through the examples.
-If you want, you can join a friend and code together.
+### hacknight
+* 6:00 - 6:30 networking and food
+* 6:30 - 6:50 presentation (introduction to Recommender Systems)
+* 6:50 - 8:20 hacking! :)
+* 8:20 - 8:45 wrap up, questions, show and tell 
 
 ### Examples of things you can do
 * See who are your neighbours, see what they have rated. This is a non-automated way to discover movies
