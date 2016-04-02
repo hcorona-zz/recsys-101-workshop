@@ -47,7 +47,25 @@ Ideally rate 20 movies, some you like, some you don't like (it is important to a
 * 6:50 - 8:20 hacking! :)
 * 8:20 - 8:45 wrap up, questions, show and tell 
 
-### Examples of things you can do
-* See who are your neighbours, see what they have rated. This is a non-automated way to discover movies
-* Take a look at the @todo and try to solve some of the suggested exercises
+### Examples of things you can do or questions that are interesting? 
+
+* What do we know about the dataset? Start an ipython notebook and plot some basic statistics, it will help you understand 
+many things about. For example, how many ratings does each movie gets? What are the most popular movies? what is the rating distribution?
+
+* It looks like some of the recommendations are from items we just rated. However, you want people to discover new movies.
+How do you make sure you never get recommendations for items you have rated? 
+
+* Are scores important? Should we filter the recommendations to only show the ones we are really sure people will like? 
+
+* How long will it take for each algorithm to generate recommendations for all users? Is it scalable? Which one is better? 
+
+* See who are your neighbours, see what they have rated. This is a non-automated way to discover movies, and it also helps to 
+understand how the UKNN algorithm works. 
+
+* Play with the parameters. For example, are your neighbours better when you use 'pearson correlation' or when you use 'cosine similarity'? 
+
 * Are the recommendations good? Which algorithm makes better recommendations?
+
+* Make recommendations for one of your colleagues. Do they like them? Is their perception on quality the same as yours? 
+
+* implement the matrix factorization algorithm. It works very well, and it is very similar to the ones used in real-world recommender systems!
