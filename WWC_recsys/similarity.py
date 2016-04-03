@@ -1,6 +1,15 @@
 import pandas as pd
-import logging
 import numpy
+from scipy.spatial.distance import cosine
+
+
+def cosine_sim(rating1, rating2):
+    """
+    :param rating1:
+    :param rating2:
+    :return: cosine similarity between the two items / users
+    """
+    return cosine(rating1, rating2)
 
 
 def common_sim(rating1, rating2):
@@ -53,6 +62,8 @@ def calculate_distance(rating1, rating2, distance_metric):
     if distance_metric == 'intersection': return common_sim(rating1, rating2)
     if distance_metric == 'pearson' : return pearson_sim(rating1, rating2)
     if distance_metric == 'jaccard': return jaccard_sim(rating1, rating2)
+    if distance_metric == 'cosine': return cosine_sim(rating1, rating2)
+
 
 
 def compute_nearest_neighbours(item, ratings_matrix, distance_metric):

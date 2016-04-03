@@ -15,7 +15,7 @@ def sort_recommendations(recommendations, N):
     return pd.DataFrame(recommendations, columns=['rating', 'movie'])
 
 
-def recommend_iknn(ratings, target_customer , K= 10, N= 10, similarity_metric='pearson'):
+def recommend_iknn(ratings, target_customer, K= 10, N= 10, similarity_metric='pearson'):
     """
     Give list of recommendations to a particular user
     :param target_customer: user for which we want to compute recommendations
@@ -27,7 +27,7 @@ def recommend_iknn(ratings, target_customer , K= 10, N= 10, similarity_metric='p
     """
 
     # create the rating matrix: for small datasets should fit in memory
-    # @todo how long will it take to get recommendations for all users (excercise)
+    # @todo how long will it take to get recommendations for all users (exercise)
     ratings_matrix = ratings.pivot_table(index='customer', columns='movie', values='rating', fill_value=0)
     ratings_matrix = ratings_matrix.transpose()
 

@@ -19,7 +19,7 @@ def load_dataset(dataset_url, datasets_folder):
     # if the .zip file doesn't exist
     if not os.path.isfile(dataset_path):
         print('downloading dataset')
-        logging.info('downloading dataset ')
+        logging.info('downloading dataset %s', dataset_url)
         zf = urllib.request.urlretrieve(dataset_url, dataset_path)
         with zipfile.ZipFile(dataset_path, "r") as z: z.extractall(datasets_folder)
     else:

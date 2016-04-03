@@ -25,7 +25,7 @@ setup(
     description=description,
     long_description=readme,
     packages=['wwc_recsys'],
-    package_dir={'wwc-recsys': 'wwc_recsys'},
+    package_dir={'wwc-recsys': '_recsys'},
     include_package_data=True,
     setup_requires=setup_requires,
     test_suite='tests',
