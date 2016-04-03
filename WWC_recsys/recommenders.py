@@ -1,6 +1,6 @@
 import pandas as pd
 import logging
-import WWC_recsys.similarity as similarity
+import wwc_recsys.similarity as similarity
 
 
 def sort_recommendations(recommendations, N):
