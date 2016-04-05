@@ -6,10 +6,10 @@ by generating recommendations for you and other attendees.
 This will be a relaxed and interactive environments, with people helping you to go through the examples. If you want, you can join a friend and code together.
 
 ### hacknight
-* 6:00 - 6:30 networking and food
-* 6:30 - 6:50 presentation (introduction to Recommender Systems)
-* 6:50 - 8:20 hacking! :collision:
-* 8:20 - 8:45 wrap up, questions, show and tell 
+* 6:00 - 6:30 networking and food :pizza: 
+* 6:30 - 6:50 presentation (introduction to Recommender Systems)  :bar_chart:
+* 6:50 - 8:20 hacking! :collision: :tada:
+* 8:20 - 8:45 wrap up, questions, show and tell  :clap:
 
 ### Before the session: 
 * You need python 3.x installed in your laptop. Click on the [Python website](https://www.python.org/downloads/) for more info
