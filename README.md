@@ -1,45 +1,20 @@
-This is the repo I prepared for the WWC recommender systems interactive session / hacknight.
-Here you will find all the relevant resources, as well as the code that will be used.
+This is the repo for a recommender systems interactive session (or hacknight). Here you will find all the relevant resources, as well as the code that will be used.
+
 The goal of the hacknight is to introduce people to recommender sytems, build your own recommender system and evaluate it
 by generating recommendations for you and other attendees. 
 
-This will be a relaxed and interactive environments, with people helping you to go through the examples. If you want, you can join a friend and code together.
+The code supports a hacknight, which should be a relaxed and interactive environments, with people helping you to go through the examples. If you want, you can join a friend and code together.
 
-### hacknight
+### Hacknight
 * 6:00 - 6:30 networking and food :pizza: 
 * 6:30 - 6:50 presentation (introduction to Recommender Systems)  :bar_chart:
 * 6:50 - 8:20 hacking! :collision: :tada:
 * 8:20 - 8:45 wrap up, questions, show and tell  :clap:
 
+
 ### Before the session: 
-* You need python 3.x installed in your laptop. Click on the [Python website](https://www.python.org/downloads/) for more info
-* Access to the internet will be provided (we need this to download the datasets)
-* Read the presentation slides and the Collaborative filtering entry on wikipedia (on resources)
-* Make sure you have ipython or [jupyter notebooks](http://jupyter.readthedocs.org/en/latest/install.html) installed 
-* Find 20 movies you know and rate them (1-5 scale). The first exercise will be to store those ratings in our dataset. 
-It is important to also rate movies you don't like, so the recommender can learn about your taste better.
+Before the session, please read and follow all the steps detailed in the [instructions file](instructions.md). If you have problems following it, you can ask questions in the meetup event forum, or using github issues. 
 
-
-### Getting ready to code: 
-* Clone or download the repository 
-* Install the required packages if you don't have them (pandas and scipy)
-* run the test example (using ipython or jupyter notebooks). If it works you are ready to go! 
-* If you want to take a look at the code, you can import the project to your favourite IDE (Pycharm is mine) 
-
-```
-if you are familiar with git
-> git clone https://github.com/hcorona/WWC-recsys
-> cd WWC-recsys/
-> jupyter notebook notebooks/example_similarity.ipynb 
-```
-
-```
-if you want to download the zipfile 
-> Download https://github.com/hcorona/wwc-recsys/archive/master.zip
-> unzip the file 
-> go to where you unzipped the file 
-> run jupyter notebook notebooks/example_similarity.ipynb 
-```
 
 ### Examples of things you can do or questions that are interesting? 
 
@@ -64,13 +39,13 @@ understand how the U-KNN algorithm works.
 
 * Implement the matrix factorization algorithm. It works very well, and it is very similar to the ones used in real-world recommender systems!
 
-### Resources
+## Resources
 * Collective Intelligence book : [Programming Collective Intelligence book] (http://www.amazon.com/gp/product/0596529325/ref=as_li_qf_sp_asin_il?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596529325&linkCode=as2&tag=tasktoy-20) 
 * Collective Intelligence (book code): [Programming Collective Intelligence code](https://github.com/cataska/programming-collective-intelligence-code)
 * [Collaborative Filtering on Wikipedia](https://en.wikipedia.org/wiki/Collaborative_filtering)
 * An introduction to RS from Humberto's talk at #unit conference: [slides](unit2016-HumbertoCorona-RecommenderSystems.pdf)
 
-### Additional resources 
+## Additional resources 
 * [Recommendations with Apache Spark](https://www.codementor.io/spark/tutorial/building-a-recommender-with-apache-spark-python-example-app-part1)
 * [The Movielens dataset website](http://grouplens.org/datasets/movielens/)
 * [ACM Recommender Systems Wiki](http://www.recsyswiki.com/wiki/)
