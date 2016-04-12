@@ -5,7 +5,7 @@ except ImportError:
     from distutils.core import setup
 
 __version__ = 0.01
-exec(open('wwwc_recsys/_version.py').read())
+exec(open('wwc_recsys/_version.py').read())
 readme = open('README.md').read()
 description = 'library for WWC interactive session'
 
