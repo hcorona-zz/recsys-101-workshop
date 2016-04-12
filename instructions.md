@@ -1,9 +1,23 @@
 ## Before the session: 
-* You need python 3.x installed in your laptop. Click on the [Python website](https://www.python.org/downloads/) for more info
+* You need python 3.x installed in your laptop. Click on the [Python website](https://www.python.org/downloads/) for more info based on the OS you work with.
+
+####Additional instructions for Windows:
+```
+ 
+* Click on Windows button.
+* Right-click on the Computer, click on Properties.
+* Click on Advanced system settings.
+* Click on the Environment Variables button.
+* Under "Systems variables", scroll down to find Path, click on it to highlight it.
+* Click on Edit button.
+* Hit the right arrow key on your keyboard to make sure you are at the end of the text.
+* Type the following ;c:\python34
+* Click "OK" to close dialogs.
+```
+
 * You also need to install the following packages: [Pandas](http://pandas.pydata.org) and [SciPy](http://www.scipy.org).
 * Make sure you have ipython or [jupyter notebooks](http://jupyter.readthedocs.org/en/latest/install.html) installed.
 * To install these packages you tipically use pip or anaconda: 
-
 ```
 if you use pip: 
 > pip3 install pandas
@@ -15,6 +29,8 @@ if you use anaconda
 > conda install scipy
 > conda install jupyter
 ```
+
+### First thing to Do: 
 
 * Find around 20 movies you know and rate them (1-5 scale). The first exercise will be to store those ratings in our dataset. It is important to also rate movies you don't like, so the recommender can learn about your taste better. For example, some of the movies I know:
 
