@@ -87,4 +87,4 @@ Now that you have run the example, and downloaded the data, you can find the mov
 * the ratings I created: under [/data/](/data/ratings_humberto.csv)
 * the file with all movie Ids in [/data/ml-latest-small](/data/ml-latest-small/README.txt)
 
-Fin the movies you like in the movies file, and write them in the ratings_yourname.csv
+Find the movies you like in the movies file, and write them in the ratings_yourname.csv
