@@ -18,26 +18,24 @@ Before the session, please read and follow all the steps detailed in the [instru
 
 ### Examples of things you can do or questions that are interesting? 
 
-* It looks like some of the recommendations are from items we just rated. However, you want people to discover new movies.
-How do you make sure you never get recommendations for items you have rated? 
+* What do we know about the dataset? Start an ipython notebook and plot some basic statistics, it will help you understand  many things about. For example, how many ratings does each movie gets? What are the most popular movies? what is the rating distribution?
+
+* Play with the parameters. For example, are your neighbours better when you use 'pearson correlation' or when you use 'cosine similarity'? 
+
+* Make recommendations for one of your colleagues (by getting their list of rated items). Do they like them? Is their perception on quality the same as yours? 
 
 * Are scores important? Should we filter the recommendations to only show the ones we are really sure people will like? 
 
-* What do we know about the dataset? Start an ipython notebook and plot some basic statistics, it will help you understand 
-many things about. For example, how many ratings does each movie gets? What are the most popular movies? what is the rating distribution?
+* It looks like some of the recommendations are from items we just rated. However, you want people to discover new movies. How do you make sure you never get recommendations for items you have rated? 
 
 * See who are your neighbours, see what they have rated. This is a non-automated way to discover movies, and it also helps to 
 understand how the U-KNN algorithm works. 
 
-* Play with the parameters. For example, are your neighbours better when you use 'pearson correlation' or when you use 'cosine similarity'? 
+* How long will it take for each algorithm to generate recommendations for all users? Is it scalable? Which one is better?  You can answer this by using python's time library and timing executions. 
 
-* Make recommendations for one of your colleagues. Do they like them? Is their perception on quality the same as yours? 
+* Are the recommendations good? Which algorithm makes better recommendations?  Everyone has different opinions, try different combinations of algorithms and parameters and discuss with other people.  
 
-* How long will it take for each algorithm to generate recommendations for all users? Is it scalable? Which one is better? 
-
-* Are the recommendations good? Which algorithm makes better recommendations?
-
-* Implement the matrix factorization algorithm. It works very well, and it is very similar to the ones used in real-world recommender systems!
+* Implement the matrix factorization algorithm. It works very well, and it is very similar to the ones used in real-world recommender systems! [Simon Funk's SVD](http://sifter.org/~simon/journal/20061211.html)
 
 ## Resources
 * Collective Intelligence book : [Programming Collective Intelligence book] (http://www.amazon.com/gp/product/0596529325/ref=as_li_qf_sp_asin_il?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596529325&linkCode=as2&tag=tasktoy-20) 
