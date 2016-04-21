@@ -60,6 +60,9 @@ Perfect Mothers	(2013)	5
 
 ```
 
+* You can use this document to save your recommendations:
+https://docs.google.com/document/d/1qKH1ZABGMegJDET0lCqXTmaMc9RoBY58Vd0oJLTDv_8/edit?usp=sharing
+
 * Read the presentation slides and the Collaborative filtering entry on wikipedia (on [resources](### Resources))
 
 
