@@ -30,6 +30,11 @@ if you use anaconda
 > conda install jupyter
 ```
 
+#### Alternative Windows installation
+
+You can also download WinPython, a distribution of Python packages that contains all you need for running Python on Windows:
+https://winpython.github.io/
+
 ### First thing to Do: 
 
 * Find around 20 movies you know and rate them (1-5 scale). The first exercise will be to store those ratings in our dataset. It is important to also rate movies you don't like, so the recommender can learn about your taste better. For example, some of the movies I know:
