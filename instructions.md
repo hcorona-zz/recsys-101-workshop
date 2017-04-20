@@ -1,7 +1,7 @@
 ## Before the session: 
 * You need python 3.x installed in your laptop. Click on the [Python website](https://www.python.org/downloads/) for more info based on the OS you work with.
 
-####Additional instructions for Windows:
+#### Additional instructions for Windows:
 ```
  
 * Click on Windows button.
