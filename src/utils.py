@@ -26,16 +26,16 @@ def load_dataset(dataset_url, datasets_folder):
         logging.info('dataset was already downloaded')
 
     # return the extracted folder that contains all the rating files
-    logging.info('sucess getting dataset folder')
+    logging.info('success getting dataset folder')
     return os.path.splitext(dataset_path)[0]
 
 
 def load_personal_ratings(datasets_folder, ratings_file, customer_number):
     """
-    :param datasets_folder:
-    :param ratings_file:
-    :param username:
-    :return:
+    :param datasets_folder: the folder where the original dataset was stored
+    :param ratings_file: the file created with personal ratings
+    :param username: the username to be assigned 
+    :return: a structure with the personal ratings, incluiding a userId 
     """
     # load personal ratings and format into the right format
     my_ratings_file = os.path.join(datasets_folder, ratings_file)

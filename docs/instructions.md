@@ -1,7 +1,7 @@
 ## Before the session: 
 * You need python 3.x installed in your laptop. Click on the [Python website](https://www.python.org/downloads/) for more info based on the OS you work with.
 
-#### Additional instructions for Windows:
+####Additional instructions for Windows:
 ```
  
 * Click on Windows button.
@@ -60,6 +60,9 @@ Perfect Mothers	(2013)	5
 
 ```
 
+* You can use this document to save your recommendations:
+https://docs.google.com/document/d/1qKH1ZABGMegJDET0lCqXTmaMc9RoBY58Vd0oJLTDv_8/edit?usp=sharing
+
 * Read the presentation slides and the Collaborative filtering entry on wikipedia (on [resources](### Resources))
 
 
@@ -72,14 +75,14 @@ Perfect Mothers	(2013)	5
 
 ```
 if you are familiar with git
-> git clone https://github.com/hcorona/wwc-recsys
-> cd wwc-recsys/
+> git clone https://github.com/hcorona/recsys-101-
+> cd recsys-101-workshop/
 > jupyter notebook notebooks/example.ipynb 
 ```
 
 ```
 if you want to download the zipfile 
-> Download https://github.com/hcorona/wwc-recsys/archive/master.zip
+> Download https://github.com/hcorona/recsys-101-workshop/archive/master.zip
 > unzip the file 
 > go to where you unzipped the file 
 > run jupyter notebook notebooks/example.ipynb 

@@ -1,6 +1,6 @@
 import pandas as pd
 import logging
-import wwc_recsys.similarity as similarity
+import src.similarity as similarity
 
 
 def sort_recommendations(recommendations, N):
@@ -27,7 +27,7 @@ def recommend_iknn(ratings, target_customer, K= 10, N= 10, similarity_metric='pe
     """
 
     # create the rating matrix: for small datasets should fit in memory
-    # @todo how long will it take to get recommendations for all users (exercise)
+    # @todo (question) how long will it take to get recommendations for all users (exercise)
     ratings_matrix = ratings.pivot_table(index='customer', columns='movie', values='rating', fill_value=0)
     ratings_matrix = ratings_matrix.transpose()
 
@@ -69,7 +69,7 @@ def recommend_uknn(ratings, target_customer , K=10, N=10, similarity_metric='pea
     :return: a dataframe with a list of recommendations and the predicted rating
     """
     # create the rating matrix: for small datasets should fit in memory
-    # @todo how long will it take to get recommendations for all users (excercise)
+    # @todo (question) how long will it take to get recommendations for all users (excercise)
     ratings_matrix = ratings.pivot_table(index='customer', columns='movie', values='rating', fill_value=0)
 
     # get the nearest neighbours and compute the total distance
@@ -78,8 +78,8 @@ def recommend_uknn(ratings, target_customer , K=10, N=10, similarity_metric='pea
     neighbours = similarity.compute_nearest_neighbours(target_customer, ratings_matrix, similarity_metric)[1:K+1]
     logging.info('computed nearest neighbours using %s', similarity_metric)
 
-    # @todo  separate this into two functions? (preparation)
-    # @todo: here we recommend movies the target user may have already rated. How can we solve that? (exercicse)
+    # @todo: (question)
+    # - here we recommend movies the target user may have already rated. How can we solve that? (exercicse)
     # Iterate through the k nearest neighbors, accumulating their ratings
     recommendations = {}
     simSums = {}
@@ -104,7 +104,7 @@ def recommend_uknn(ratings, target_customer , K=10, N=10, similarity_metric='pea
     return sort_recommendations(recs_normalized, N)
 
 
-# @todo add this model as a pedagocical example
+# @todo: (improvement add this model as a example
 # read this great blog and try to implement the example
 # it produces really good recommendations
 # http://sifter.org/~s
