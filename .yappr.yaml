@@ -1,0 +1,23 @@
+approvals:
+  minimum: 1
+  pattern: "^(:\\+1:|👍)$"
+  veto:
+    pattern: "^(:\\-1:|👎)$"
+autobranch:
+  pattern: "{number}-{title}"
+  length: 79
+commit:
+  message:
+    patterns: # commit message has to match any one of
+      - "^#[0-9]+" # starts with hash and digits eg. Github Issues
+      - "^[A-Z]+-[0-9]+" # starts with uppercase letters, a dash and digits eg. JIRA
+specification:
+  title:
+    minimum-length:
+      enabled: true
+      length: 10
+  body:
+    minimum-length:
+      enabled: true
+      length: 10
+    contains-url: false
