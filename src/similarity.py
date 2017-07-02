@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy
-from sklearn.metrics import jaccard_similarity_score
-from sklearn.metrics.pairwise import cosine_distances
+from scipy.spatial.distance import cosine
 
 
 def cosine_sim(rating1, rating2):
@@ -10,7 +9,7 @@ def cosine_sim(rating1, rating2):
     :param rating2:
     :return: cosine similarity between the two items / users
     """
-    return cosine_distances(rating1, rating2)
+    return (1 - cosine(rating1, rating2))
 
 
 def common_sim(rating1, rating2):
@@ -40,7 +39,15 @@ def jaccard_sim(rating1, rating2):
     :return: jaccard similarity between the two set of ratings
     https://en.wikipedia.org/wiki/Jaccard_index
     """
-    return jaccard_similarity_score(rating1, rating2)
+
+    set_1 = set(rating1[rating1 != 0].index)
+    set_2 = set(rating1[rating2 != 0].index)
+
+    intersection_cardinality = len(set.intersection(*[set_1, set_2]))
+    union_cardinality = len(set.union(*[set_1, set_2]))
+
+
+    return intersection_cardinality / float(union_cardinality)
 
 
 # @todo: (question) implement most popular similarity

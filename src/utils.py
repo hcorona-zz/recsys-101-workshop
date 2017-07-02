@@ -6,7 +6,7 @@ import time
 import pandas as pd
 
 
-def load_dataset(dataset_url, datasets_folder):
+def load_dataset(datasets_folder, dataset_url= "http://files.grouplens.org/datasets/movielens/ml-latest-small.zip"):
     """
     queries any of the movielens dataset and stores it into the desired folder
     :param dataset_url: the url from where to fetch the dataset (from movielens.org)
@@ -18,7 +18,6 @@ def load_dataset(dataset_url, datasets_folder):
 
     # if the .zip file doesn't exist
     if not os.path.isfile(dataset_path):
-        print('downloading dataset')
         logging.info('downloading dataset %s', dataset_url)
         zf = urllib.request.urlretrieve(dataset_url, dataset_path)
         with zipfile.ZipFile(dataset_path, "r") as z: z.extractall(datasets_folder)
@@ -26,7 +25,7 @@ def load_dataset(dataset_url, datasets_folder):
         logging.info('dataset was already downloaded')
 
     # return the extracted folder that contains all the rating files
-    logging.info('success getting dataset folder')
+    logging.info('dataset stored in: %s', os.path.splitext(dataset_path)[0])
     return os.path.splitext(dataset_path)[0]
 
 
@@ -43,36 +42,35 @@ def load_personal_ratings(datasets_folder, ratings_file, customer_number):
     my_ratings['userId'] = customer_number
     my_ratings['timestamp'] = int(round(time.time() * 1000))
     my_ratings = my_ratings[['userId', 'movieId', 'rating', 'timestamp']]
+    logging.info("loaded %d personal ratings", len(my_ratings.index))
     return my_ratings
 
 
-def merge_datasets(datasets_folder, dataset_url, my_ratings_file):
+def merge_datasets(dataset_folder, my_ratings_file):
     """
-    :param datasets_folder: where to store the dataset
-    :param dataset_url: the url to download the dataset from
+    :param dataset_folder: folder was previously the dataset is downloaded to
     :param my_ratings_file: where is the personal recommendations file stored
     :return: a dataframe with the ratings (merges original ratings with personal ratings)
     """
 
-    # load ratings
-    dataset_path = load_dataset(dataset_url, datasets_folder)
-    ratings_file = os.path.join(dataset_path, 'ratings.csv')
+    # load original dataset ratings file
+    ratings_file = os.path.join(dataset_folder, 'ratings.csv')
     ratings = pd.read_csv(ratings_file)
-    ratings.head()
 
-    # append my ratings to ratings dataframe
+    # append personal ratings to ratings dataframe from original dataset
     customer_number = ratings.userId.max() + 1
-    my_ratings = load_personal_ratings(datasets_folder, my_ratings_file, customer_number=customer_number)
+    my_ratings = load_personal_ratings(dataset_folder, my_ratings_file, customer_number=customer_number)
     ratings = ratings.append(my_ratings)
 
     # load movie metadata
-    movies_file = os.path.join(dataset_path, 'movies.csv')
+    movies_file = os.path.join(dataset_folder, 'movies.csv')
     movies = pd.read_csv(movies_file)
-    movies.head()
+    logging.info("loaded %d movies", len(movies.index))
 
     # lets use movie titles instead of id's to make things more human readable
     ratings = ratings.merge(movies, on='movieId').drop(['genres','timestamp','movieId'],1)
     ratings = ratings[['userId', 'title', 'rating']]
     ratings.columns = ['customer', 'movie', 'rating']
+    logging.info("loaded %d ratings in total", len(ratings.index))
 
     return [ratings, customer_number]
