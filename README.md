@@ -1,14 +1,14 @@
-This is the repo for a recommender systems interactive session (or hacknight). Here you will find all the relevant resources, as well as the code that will be used.
+This is the repo for a recommender systems interactive session (or hackworkshop). Here you will find all the relevant resources, as well as the code that will be used.
 
-The goal of the hacknight is to introduce people to recommender sytems, build your own recommender system and evaluate it
+The goal of the hackworkshop is to introduce people to recommender sytems, build your own recommender system and evaluate it
 by generating recommendations for you and other attendees. 
 
-The code supports a hacknight, which should be a relaxed and interactive environments, with people helping you to go through the examples. If you want, you can join a friend and code together.
+The code supports a hackworkshop, which should be a relaxed and interactive environments, with people helping you to go through the examples. If you want, you can join a friend and code together.
 
-### Hacknight
-* 15:00 - 15:30 presentation (introduction to Recommender Systems)  
-* 15:30 - 17:00 hacking! :collision: 
-* 17:00 - 17:30 wrap up, questions, show and tell 
+### Hackwokrshop suggested times 
+* 30 mins: presentation (introduction to Recommender Systems)  
+* 1h 30 mins: hacking! :collision: 
+* 30 mins:  wrap up, questions, show and tell 
 
 
 ### Before the session: 
@@ -39,7 +39,7 @@ Before the session, please read and follow all the steps detailed in the [instru
 * Collective Intelligence book : [Programming Collective Intelligence book](http://www.amazon.com/gp/product/0596529325/ref=as_li_qf_sp_asin_il?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596529325&linkCode=as2&tag=tasktoy-20) 
 * Collective Intelligence (book code): [Programming Collective Intelligence code](https://github.com/cataska/programming-collective-intelligence-code)
 * [Collaborative Filtering on Wikipedia](https://en.wikipedia.org/wiki/Collaborative_filtering)
-* An introduction to RS from Humberto's talk at #unit conference: [slides](docs/unit2017-HumbertoCorona-RecommenderSystems.pdf)
+* An introduction to RS from Humberto's talk at #unit conference: [slides](https://github.com/hcorona/recsys-101-workshop/blob/master/docs/unit2016-HumbertoCorona-RecommenderSystems.pdf)
 
 ## Additional resources 
 * [Recommendations with Apache Spark](https://www.codementor.io/spark/tutorial/building-a-recommender-with-apache-spark-python-example-app-part1)

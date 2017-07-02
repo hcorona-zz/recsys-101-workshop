@@ -2,8 +2,8 @@
 * You need python 3.x installed in your laptop. Click on the [Python website](https://www.python.org/downloads/) for more info based on the OS you work with.
 
 ####Additional instructions for Windows:
-```
- 
+
+``` 
 * Click on Windows button.
 * Right-click on the Computer, click on Properties.
 * Click on Advanced system settings.
@@ -17,7 +17,8 @@
 
 * You also need to install the following packages: [Pandas](http://pandas.pydata.org) and [SciPy](http://www.scipy.org).
 * Make sure you have ipython or [jupyter notebooks](http://jupyter.readthedocs.org/en/latest/install.html) installed.
-* To install these packages you tipically use pip or anaconda: 
+* To install these packages you typically use pip or anaconda: 
+
 ```
 if you use pip: 
 > pip3 install pandas
@@ -60,16 +61,12 @@ Perfect Mothers	(2013)	5
 
 ```
 
-* You can use this document to save your recommendations:
-https://docs.google.com/document/d/1qKH1ZABGMegJDET0lCqXTmaMc9RoBY58Vd0oJLTDv_8/edit?usp=sharing
-
 * Read the presentation slides and the Collaborative filtering entry on wikipedia (on [resources](### Resources))
-
 
 ### Getting ready to code: 
 * You can either download the repository zip file, or clone the repository.
 * Now that you have all the required packages, you should be ready to go!
-* run the example [example.ipynb](/notebooks/example.ipynb) using ipython or jupyter notebooks on your laptop.
+* run the example [example1](https://github.com/hcorona/recsys-101-workshop/blob/master/notebooks/notebook-1-data-gathering.ipynb) using ipython or jupyter notebooks on your laptop.
 * If you want to take a better look at the code, you can import the project to your favourite IDE (Pycharm is mine) 
 * You will need access to the internet to download the dataset.
 
@@ -92,7 +89,7 @@ if you want to download the zipfile
 
 Now that you have run the example, and downloaded the data, you can find the movies in the downloaded dataset and find the following files: 
 
-* the ratings I created: under [/data/](/data/ratings_humberto.csv)
-* the file with all movie Ids in [/data/ml-latest-small](/data/ml-latest-small/README.txt)
+* the ratings I created: under [/data/](https://github.com/hcorona/recsys-101-workshop/blob/master/data/ratings_humberto.csv)
+* the file with all movie Ids in [/data/ml-latest-small](https://github.com/hcorona/recsys-101-workshop/blob/master/data/ml-latest-small/README.txt)
 
 Find the movies you like in the movies file, and write them in the ratings_yourname.csv
