@@ -45,8 +45,6 @@ def jaccard_sim(rating1, rating2):
 
     intersection_cardinality = len(set.intersection(*[set_1, set_2]))
     union_cardinality = len(set.union(*[set_1, set_2]))
-
-
     return intersection_cardinality / float(union_cardinality)
 
 

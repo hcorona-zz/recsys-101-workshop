@@ -39,7 +39,7 @@ Before the session, please read and follow all the steps detailed in the [instru
 * Collective Intelligence book : [Programming Collective Intelligence book](http://www.amazon.com/gp/product/0596529325/ref=as_li_qf_sp_asin_il?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596529325&linkCode=as2&tag=tasktoy-20) 
 * Collective Intelligence (book code): [Programming Collective Intelligence code](https://github.com/cataska/programming-collective-intelligence-code)
 * [Collaborative Filtering on Wikipedia](https://en.wikipedia.org/wiki/Collaborative_filtering)
-* An introduction to RS from Humberto's talk at #unit conference: [slides](/docs/unit2017-HumbertoCorona-RecommenderSystems.pdf)
+* An introduction to RS from Humberto's talk at #unit conference: [slides](docs/unit2017-HumbertoCorona-RecommenderSystems.pdf)
 
 ## Additional resources 
 * [Recommendations with Apache Spark](https://www.codementor.io/spark/tutorial/building-a-recommender-with-apache-spark-python-example-app-part1)
