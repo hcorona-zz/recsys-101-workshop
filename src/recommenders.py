@@ -36,23 +36,29 @@ def recommend_iknn(ratings, target_customer, K= 10, N= 10, similarity_metric='pe
 
     recommendations = {}
     simSums = {}
+    supportRatings = {}
+    threshold = 6
 
     # for each movie the user rated, get all the possible neighbours
     for user_movie in user_movies.index:
         nearest = similarity.compute_nearest_neighbours(user_movie, ratings_matrix.drop(target_customer,1), similarity_metric)[1:K+1]
+        nearest['similarity'] = nearest['similarity'] / nearest.similarity.sum()
 
         # calculate the predicted rating for each recommendations
         for movie in nearest.item.unique():
             weight = nearest.similarity[nearest.item == movie]
             prediction = user_movies[user_movie]*weight
-            # if there is a new movie, set the similarity and sums to 0
+
             recommendations.setdefault(movie, 0)
+            supportRatings.setdefault(movie, 0)
             simSums.setdefault(movie, 0)
             recommendations[movie] += prediction.values[0]
+            supportRatings[movie] += 1
             simSums[movie] += weight.values[0]
 
     # Divide each total score by total weighting to get an average
-    recs_normalized = [(recommendations/simSums[movie], movie) for movie, recommendations in recommendations.items()]
+    recs_normalized = [(recommendations / simSums[movie] * min((supportRatings[movie] - threshold), 1), movie) for
+                       movie, recommendations in recommendations.items()]
 
     # normalise so that the sum of weights for each movie adds to 1
     return sort_recommendations(recs_normalized, N)
@@ -76,13 +82,15 @@ def recommend_uknn(ratings, target_customer , K=10, N=10, similarity_metric='pea
     # normalize scores to add to 1
     # only compute from [1:K] to avoid self correlation (index 0)
     neighbours = similarity.compute_nearest_neighbours(target_customer, ratings_matrix, similarity_metric)[1:K+1]
+    neighbours['similarity'] = neighbours['similarity'] / neighbours.similarity.sum()
     logging.info('computed nearest neighbours using %s', similarity_metric)
 
     # @todo: (question)
     # - here we recommend movies the target user may have already rated. How can we solve that? (exercicse)
     # Iterate through the k nearest neighbors, accumulating their ratings
     recommendations = {}
-    simSums = {}
+    supportRatings = {}
+    threshold = 6
 
     for neighbour in neighbours.item.unique():
 
@@ -94,13 +102,14 @@ def recommend_uknn(ratings, target_customer , K=10, N=10, similarity_metric='pea
             prediction = neighbour_ratings.rating[neighbour_ratings.movie == movie]*weight.values[0]
             # if there is a new movie, set the similarity and sums to 0
             recommendations.setdefault(movie, 0)
-            simSums.setdefault(movie, 0)
-
+            supportRatings.setdefault(movie, 0)
             recommendations[movie] += prediction.values[0]
-            simSums[movie] += weight.values[0]
+            supportRatings[movie] += 1
 
     # normalise so that the sum of weights for each movie adds to 1
-    recs_normalized = [(recommendations/simSums[movie], movie) for movie, recommendations in recommendations.items()]
+    recs_normalized = [(recommendations * min((supportRatings[movie] - threshold), 1), movie) for
+                       movie, recommendations in recommendations.items()]
+
     return sort_recommendations(recs_normalized, N)
 
 
