@@ -37,7 +37,7 @@ def recommend_iknn(ratings, target_customer, K= 10, N= 10, similarity_metric='pe
     recommendations = {}
     simSums = {}
     supportRatings = {}
-    threshold = 5
+    threshold = 6
 
     # for each movie the user rated, get all the possible neighbours
     for user_movie in user_movies.index:
@@ -89,9 +89,8 @@ def recommend_uknn(ratings, target_customer , K=10, N=10, similarity_metric='pea
     # - here we recommend movies the target user may have already rated. How can we solve that? (exercicse)
     # Iterate through the k nearest neighbors, accumulating their ratings
     recommendations = {}
-    simSums = {}
     supportRatings = {}
-    threshold = 5
+    threshold = 6
 
     for neighbour in neighbours.item.unique():
 
@@ -104,14 +103,11 @@ def recommend_uknn(ratings, target_customer , K=10, N=10, similarity_metric='pea
             # if there is a new movie, set the similarity and sums to 0
             recommendations.setdefault(movie, 0)
             supportRatings.setdefault(movie, 0)
-            simSums.setdefault(movie, 0)
-
             recommendations[movie] += prediction.values[0]
             supportRatings[movie] += 1
-            simSums[movie] += weight.values[0]
 
     # normalise so that the sum of weights for each movie adds to 1
-    recs_normalized = [(recommendations / simSums[movie] * min((supportRatings[movie] - threshold), 1), movie) for
+    recs_normalized = [(recommendations * min((supportRatings[movie] - threshold), 1), movie) for
                        movie, recommendations in recommendations.items()]
 
     return sort_recommendations(recs_normalized, N)

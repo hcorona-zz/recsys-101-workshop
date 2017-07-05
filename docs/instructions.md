@@ -11,7 +11,7 @@
 
 ### Installing and configuring Python
 
-* You need python 3.x installed in your laptop. Click on the [Python website](https://www.python.org/downloads/) for more info based on the OS you work with.
+* You need python 3.x installed in your laptop. Click on the [Python website](https://www.python.org/downloads/) for more info based on the OS you work with. (if you have Windows, check out the additional instructions at the end of the document)
 
 * You Also need to install a few [python packages](https://pypi.python.org/pypi) such as Pandas, SciPy and Jupyter: 
 
@@ -53,3 +53,23 @@ if you want to download the zipfile
 Now that you have run the example, and downloaded the data, you can run the first notebook to make sure everything went OK.
 
 * run the first notebook [notebook-1-data-gathering](https://github.com/hcorona/recsys-101-workshop/blob/master/notebooks/notebook-1-data-gathering.ipynb) using jupyter notebooks (***Note: You will need access to the internet to download the dataset.***)
+
+
+### Alternative Windows installation
+
+You can also download WinPython, a distribution of Python packages that contains all you need for running Python on Windows:
+https://winpython.github.io/
+
+Once you have Python installed, make sure you follow this instructions: 
+
+``` 
+* Click on Windows button.
+* Right-click on the Computer, click on Properties.
+* Click on Advanced system settings.
+* Click on the Environment Variables button.
+* Under "Systems variables", scroll down to find Path, click on it to highlight it.
+* Click on Edit button.
+* Hit the right arrow key on your keyboard to make sure you are at the end of the text.
+* Type the following ;c:\python34
+* Click "OK" to close dialogs.
+```
