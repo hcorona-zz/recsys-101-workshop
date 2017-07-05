@@ -1,23 +1,19 @@
 ## Before the session: 
+
+### Exporting your IMDb ratings 
+1. Go to [IMDb](http://imdb.com) and make an account if you don't have one
+2. If you have no ratings in your account, rate at least 10 movies you liked and 10 movies you didn't like.  ***(It is important to also rate movies you don't like, so the recommender can learn about your taste better)***
+2. Go to your account (top right) and click on "your Ratings"
+3. Go to the bottom of the page, next to the "next" button, you will find an "Export this list" button. It will export your ratings to your Downloads folder. 
+4. Move the file inside your /data folder in this repo
+
+
+
+### Installing and configuring Python
+
 * You need python 3.x installed in your laptop. Click on the [Python website](https://www.python.org/downloads/) for more info based on the OS you work with.
 
-####Additional instructions for Windows:
-
-``` 
-* Click on Windows button.
-* Right-click on the Computer, click on Properties.
-* Click on Advanced system settings.
-* Click on the Environment Variables button.
-* Under "Systems variables", scroll down to find Path, click on it to highlight it.
-* Click on Edit button.
-* Hit the right arrow key on your keyboard to make sure you are at the end of the text.
-* Type the following ;c:\python34
-* Click "OK" to close dialogs.
-```
-
-* You also need to install the following packages: [Pandas](http://pandas.pydata.org) and [SciPy](http://www.scipy.org).
-* Make sure you have ipython or [jupyter notebooks](http://jupyter.readthedocs.org/en/latest/install.html) installed.
-* To install these packages you typically use pip or anaconda: 
+* You Also need to install a few [python packages](https://pypi.python.org/pypi) such as Pandas, SciPy and Jupyter: 
 
 ```
 if you use pip: 
@@ -31,44 +27,11 @@ if you use anaconda
 > conda install jupyter
 ```
 
-#### Alternative Windows installation
 
-You can also download WinPython, a distribution of Python packages that contains all you need for running Python on Windows:
-https://winpython.github.io/
-
-### First thing to Do: 
-
-* Find around 20 movies you know and rate them (1-5 scale). The first exercise will be to store those ratings in our dataset. It is important to also rate movies you don't like, so the recommender can learn about your taste better. For example, some of the movies I know:
-
-```
-The Endless Summer(1966)	5
-After the Wedding (2006)	4
-No (2012)	4
-Submarine (2010)	4
-Win Win (2011)	3
-Born on the Fourth of July (1989)	2
-Bowling for Columbine	(2002)	5
-Amour (2012)	5
-Love Actually (2003)	3
-Juno (2007)	4
-Zero Dark Thirty	(2012)	4
-Up in the Air	 (2009)	4		
-Moonrise Kingdom	(2012)	5
-8 Mile	(2002)	2
-Blue Jasmine	(2013)	3
-The Way Way Back	(2013)	4	
-Perfect Mothers	(2013)	5
-
-```
-
-* Read the presentation slides and the Collaborative filtering entry on wikipedia (on [resources](### Resources))
-
-### Getting ready to code: 
+### Getting ready to code
 * You can either download the repository zip file, or clone the repository.
 * Now that you have all the required packages, you should be ready to go!
-* run the example [example1](https://github.com/hcorona/recsys-101-workshop/blob/master/notebooks/notebook-1-data-gathering.ipynb) using ipython or jupyter notebooks on your laptop.
-* If you want to take a better look at the code, you can import the project to your favourite IDE (Pycharm is mine) 
-* You will need access to the internet to download the dataset.
+* Finally, if you want to take a better look at the code, you can open the project into with IDE (like [Pycharm](https://www.jetbrains.com/pycharm/)) 
 
 ```
 if you are familiar with git
@@ -87,9 +50,6 @@ if you want to download the zipfile
 
 ### Running the example and rate your own movies:
 
-Now that you have run the example, and downloaded the data, you can find the movies in the downloaded dataset and find the following files: 
+Now that you have run the example, and downloaded the data, you can run the first notebook to make sure everything went OK.
 
-* the ratings I created: under [/data/](https://github.com/hcorona/recsys-101-workshop/blob/master/data/ratings_humberto.csv)
-* the file with all movie Ids in [/data/ml-latest-small](https://github.com/hcorona/recsys-101-workshop/blob/master/data/ml-latest-small/README.txt)
-
-Find the movies you like in the movies file, and write them in the ratings_yourname.csv
+* run the first notebook [notebook-1-data-gathering](https://github.com/hcorona/recsys-101-workshop/blob/master/notebooks/notebook-1-data-gathering.ipynb) using jupyter notebooks (***Note: You will need access to the internet to download the dataset.***)
