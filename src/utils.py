@@ -74,3 +74,27 @@ def merge_datasets(dataset_folder, my_ratings_file):
     logging.info("loaded %d ratings in total", len(ratings.index))
 
     return [ratings, customer_number]
+
+
+def import_imdb_ratings(imdb_exported_ratings_file, links_file, ratings_file):
+    """
+    :param imdb_exported_ratings_file: 
+    :param links_file: 
+    :param ratings_file: 
+    :return: 
+    """
+
+    #  You can download the ratings from your imdb profile by clicking export
+    my_imdb_ratings = pd.read_csv(imdb_exported_ratings_file, usecols=[1,5,8])
+    my_imdb_ratings['const'] = my_imdb_ratings['const'].map(lambda x: str(x)[2:])      # strip the tt at the start
+    my_imdb_ratings['You rated'] = my_imdb_ratings['You rated'].map(lambda x: x/2)     # move to 0-5 rating
+
+    # the movielens dataset has a links.csv files that we can use to match
+    links = pd.read_csv(links_file)
+    links['imdbId'] = links['imdbId'].astype('str')
+
+    personal_imdb_ratings = pd.merge(my_imdb_ratings, links, left_on='const', right_on='imdbId')
+    personal_imdb_ratings = personal_imdb_ratings[['movieId','You rated','Title']]
+    personal_imdb_ratings.columns = ['movieId','rating','title']
+    personal_imdb_ratings.to_csv(ratings_file, index=False, index_label=False)
+    logging.info('wrote IMDB ratings into the dataset format to %s', ratings_file)
