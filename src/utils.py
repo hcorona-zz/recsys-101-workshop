@@ -16,6 +16,10 @@ def load_dataset(datasets_folder, dataset_url= "http://files.grouplens.org/datas
     zipfile_name = os.path.basename(dataset_url)
     dataset_path = os.path.join(datasets_folder, zipfile_name)
 
+    #if folder does not exists
+    if not os.path.exists(datasets_folder):
+        os.makedirs(datasets_folder)
+
     # if the .zip file doesn't exist
     if not os.path.isfile(dataset_path):
         logging.info('downloading dataset %s', dataset_url)

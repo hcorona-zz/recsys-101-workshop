@@ -37,7 +37,7 @@ if you use anaconda
 if you are familiar with git
 > git clone https://github.com/hcorona/recsys-101-
 > cd recsys-101-workshop/
-> jupyter notebook notebooks/example.ipynb 
+> jupyter notebook --ip="*" notebooks/example.ipynb 
 ```
 
 ```
