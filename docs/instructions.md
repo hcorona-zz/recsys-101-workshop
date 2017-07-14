@@ -35,9 +35,9 @@ if you use anaconda
 
 ```
 if you are familiar with git
-> git clone https://github.com/hcorona/recsys-101-
+> git clone https://github.com/hcorona/recsys-101-workshop
 > cd recsys-101-workshop/
-> jupyter notebook --ip="*" notebooks/example.ipynb 
+> jupyter notebook --ip="*" notebooks/notebook-0-data-gathering.ipynb
 ```
 
 ```
@@ -45,14 +45,14 @@ if you want to download the zipfile
 > Download https://github.com/hcorona/recsys-101-workshop/archive/master.zip
 > unzip the file 
 > go to where you unzipped the file 
-> run jupyter notebook notebooks/example.ipynb 
+> run jupyter notebook notebooks/notebook-0-data-gathering.ipynb
 ```
 
 ### Running the example and rate your own movies:
 
 Now that you have run the example, and downloaded the data, you can run the first notebook to make sure everything went OK.
 
-* run the first notebook [notebook-1-data-gathering](https://github.com/hcorona/recsys-101-workshop/blob/master/notebooks/notebook-1-data-gathering.ipynb) using jupyter notebooks (***Note: You will need access to the internet to download the dataset.***)
+* run the first notebook [notebook-1-data-gathering](https://github.com/hcorona/recsys-101-workshop/blob/master/notebooks/notebook-0-data-gathering.ipynb) using jupyter notebooks (***Note: You will need access to the internet to download the dataset.***)
 
 
 ### Alternative Windows installation
