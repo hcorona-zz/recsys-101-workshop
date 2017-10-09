@@ -1,11 +1,10 @@
-This is the repo for a recommender systems interactive session (or hackworkshop). Here you will find all the relevant resources, as well as the code that will be used.
+No, we’re not reading your mind!
 
-The goal of the hackworkshop is to introduce people to recommender sytems, build your own recommender system and evaluate it
-by generating recommendations for you and other attendees. 
+Ever notice how so much of your online experience is curated to you - recommended outfits on Zalando, suggested songs or books. In this interactive workshop, we will introduce and practice the most important concepts about recommender systems, the force behind the personalized experience.
 
-The code supports a hackworkshop, which should be a relaxed and interactive environments, with people helping you to go through the examples. If you want, you can join a friend and code together.
+By the end of the workshop, you will be able to build and evaluate your own recommender system and discuss the outcomes with the help of our mentors, all in a very informal and interactive way. If you’ve got basic Python knowledge, you’re a great fit for this workshop. Bring along a friend and code together!
 
-### Hackwokrshop suggested times 
+### Hack/wokrshop suggested times 
 * 30 mins: presentation (introduction to Recommender Systems)  
 * 1h 30 mins: hacking! :collision: 
 * 30 mins:  wrap up, questions, show and tell 
@@ -37,7 +36,7 @@ Before the session, please read and follow all the steps detailed in the [instru
 
 ## Resources
 * Collective Intelligence book : [Programming Collective Intelligence book](http://www.amazon.com/gp/product/0596529325/ref=as_li_qf_sp_asin_il?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596529325&linkCode=as2&tag=tasktoy-20) 
-* Collective Intelligence (book code): [Programming Collective Intelligence code](https://github.com/cataska/programming-collective-intelligence-code)
+* Collective Intelligence (book code): [Programming Collective Intelligence code](https://github.com/arthur-e/Programming-Collective-Intelligence)
 * [Collaborative Filtering on Wikipedia](https://en.wikipedia.org/wiki/Collaborative_filtering)
 * An introduction to RS by Humberto: [slides](https://github.com/hcorona/recsys-101-workshop/blob/master/docs/toa-2017.pdf)
 
