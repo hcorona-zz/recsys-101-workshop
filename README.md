@@ -1,4 +1,4 @@
-No, we’re not reading your mind!
+***No, we’re not reading your mind!***
 
 Ever notice how so much of your online experience is curated to you - recommended outfits on Zalando, suggested songs or books. In this interactive workshop, we will introduce and practice the most important concepts about recommender systems, the force behind the personalized experience.
 
