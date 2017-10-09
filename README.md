@@ -4,7 +4,7 @@ Ever notice how so much of your online experience is curated to you - recommende
 
 By the end of the workshop, you will be able to build and evaluate your own recommender system and discuss the outcomes with the help of our mentors, all in a very informal and interactive way. If you’ve got basic Python knowledge, you’re a great fit for this workshop. Bring along a friend and code together!
 
-### Hack/wokrshop suggested times 
+### Workshop suggested times 
 * 30 mins: presentation (introduction to Recommender Systems)  
 * 1h 30 mins: hacking! :collision: 
 * 30 mins:  wrap up, questions, show and tell 
