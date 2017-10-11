@@ -17,9 +17,7 @@
 
 ```
 if you use pip: 
-> pip3 install pandas
-> pip3 install scipy
-> pip3 install jupyter
+> pip3 install -r requirements.txt
 	
 if you use anaconda
 > conda install pandas
