@@ -20,9 +20,10 @@ if you use pip:
 > pip3 install -r requirements.txt
 	
 if you use anaconda
-> conda install pandas
-> conda install scipy
-> conda install jupyter
+> conda install pandas=1.0.0
+> conda install scipy=0.20.3
+> conda install jupyter=0.19.1
+> conda install matplotlib=2.1.0
 ```
 
 
