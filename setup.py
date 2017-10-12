@@ -17,6 +17,7 @@ setup_requires = [
     'nose',
     'pandas',
     'numpy',
+    'matplotlib',
 ]
 
 setup(
