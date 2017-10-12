@@ -11,7 +11,7 @@ By the end of the workshop, you will be able to build and evaluate your own reco
 
 
 ### Before the session: 
-Before the session, please read and follow all the steps detailed in the [instructions file](docs/instructions.md). If you have problems following it, you can ask questions in the meetup event forum, or using github issues. 
+**Before the session, please read and follow all the steps detailed in the [instructions file](docs/instructions.md). If you have problems following it, you can ask questions in the meetup event forum, or using github issues.**
 
 
 ### Examples of things you can do or questions that are interesting? 
